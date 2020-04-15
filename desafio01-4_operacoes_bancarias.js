@@ -3,20 +3,17 @@ function createTransactions(transaction){
 }
 
 function getHigherTransactionByType(typeTransaction){
-  let bigger
-  
-  for (let i = 0; i < user.transactions.length; i++){
-    if (user.transactions[i].type == typeTransaction){   
-      
-      if (user.transactions[0].value){
-        bigger = user.transactions[i].value
-      } else {
-        if (user.transactions[i].value > bigger) bigger = user.transactions[i]
-      }   
-    }
+  let higherTransaction
+  let higherValue = 0
 
+  for (let transaction of user.transactions) {
+    if (transaction.type == typeTransaction && transaction.value > higherValue) {
+      higherValue = transaction.value
+      higherTransaction = transaction
+    }
   }
-  return console.log("*******", bigger)
+
+  return higherTransaction
 }
 
 function getAverageTransactionValue(){
@@ -50,10 +47,9 @@ const user = {
 };
 
 createTransactions({ type: "credit", value: 50 });
-createTransactions({ type: "credit", value: 60 });
-createTransactions({ type: "debit", value: 50 });
-createTransactions({ type: "debit", value: 70 });
-createTransactions({ type: "credit", value: 200 });
+createTransactions({ type: "credit", value: 120 });
+createTransactions({ type: "debit", value: 80 });
+createTransactions({ type: "debit", value: 30 });
 getHigherTransactionByType("credit")
 getHigherTransactionByType("debit")
 getAverageTransactionValue()
