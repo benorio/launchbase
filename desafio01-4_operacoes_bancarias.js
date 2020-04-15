@@ -13,7 +13,7 @@ function getHigherTransactionByType(typeTransaction){
     }
   }
 
-  return higherTransaction
+  return console.log(higherTransaction)
 }
 
 function getAverageTransactionValue(){
