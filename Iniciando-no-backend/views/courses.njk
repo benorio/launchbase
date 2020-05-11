@@ -1,0 +1,93 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  {%block header %}
+    <title>Desafio3.1 - Primeiro Servidor</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {%endblock%}
+
+    <header>
+      <div class="wrapper-container">
+        <div class="wrapper-box">
+          <a href="/LaunchBase/Iniciando-no-front-end/desafio2-3/desafio2-2.html">
+            <img src="https://skylab.rocketseat.com.br/static/0ae02df14343f202953af82f30a1581b.svg" alt="rocketseat">
+          </a>
+        </div>
+        <div class="links">
+          <a href="https://instagram.com/">Instagram</a>
+          <a href="https://www.linkedin.com/">linkedin</a>
+          <a href="http://github.com/">Github</a>
+          <a href="/">Sobre</a>
+        </div>
+      </div>
+    </header>
+    <div id="wrapper-upper">
+      <h1>
+        <b>Escolha um dos cursos</b>
+        e alavanque sua carreira...</h1>
+    </div>
+    <section class="cards-courses">
+      <div class="card-course" id="starter">
+        <div class="card__img-container-course">
+          <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="LaunchBase">
+        </div>
+        <div class="content-course">
+          <p>
+            <b>Torne-se um programador desejado</b>
+            no mercado com esses cursos gratuitos</p>
+        </div>
+        <div class="card__info">
+          <p>10 Aulas</p>
+          <p class="card_price">Gratuito</p>
+        </div>
+      </div>
+      <div class="card-course" id="launchbase">
+        <div class="card__img-container-course">
+          <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="LaunchBase">
+        </div>
+        <div class="content-course">
+          <p>
+            <b>Torne-se um programador desejado</b>
+            no mercado com esses cursos gratuitos</p>
+        </div>
+        <div class="card__info">
+          <p>10 Aulas</p>
+          <p class="card_price">Gratuito</p>
+        </div>
+      </div>
+      <div class="card-course" id="gostack">
+        <div class="card__img-container-course">
+          <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="LaunchBase">
+        </div>
+        <div class="content-course">
+          <p>
+            <b>Torne-se um programador desejado</b>
+            no mercado com esses cursos gratuitos</p>
+        </div>
+        <div class="card__info">
+          <p>10 Aulas</p>
+          <p class="card_price">Gratuito</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <a class="close-modal">
+          <i class="material-icons">close</i>
+        </a>
+        <a class="max-modal">
+          <i class="material-icons">maximize</i>
+        </a>
+        <div class="modal-content">
+          <iframe src="" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/scripts.js"></script>
+{%endblock%}
