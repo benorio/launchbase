@@ -1,0 +1,66 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  {%block header %}
+    <title>Desafio3.1 - Primeiro Servidor</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {%endblock%}
+
+    <header>
+      <div class="wrapper-container">
+        <div class="wrapper-box">
+          <a href="/">
+            <img src="https://skylab.rocketseat.com.br/static/0ae02df14343f202953af82f30a1581b.svg" alt="rocketseat">
+          </a>
+        </div>
+        <div class="links">
+        {%for link in links %}
+          <a href="{{link.url}}">{{link.name}}</a>
+        {% endfor %}
+        </div>
+      </div>
+    </header>
+    <div id="wrapper-upper">
+      <h1>
+        <b>Escolha um dos cursos</b>
+        e alavanque sua carreira...</h1>
+    </div>
+    <section class="cards-courses">
+      {%for item in items %}
+        <div class="card-course" id="{{item.id}}">
+          <div class="card__img-container-course {{'featured-wrapper' if item}}">
+            <img src="{{item.img}}" alt="imagem do curso {{item.id}}">
+            {% if item.featured %}
+              <div class="featured">Featured</div>
+            {% endif %}
+          </div>
+          <div class="content-course">
+            <p>{{item.content}}</p>
+          </div>
+          <div class="card__info">
+            <p>10 Aulas</p>
+            <p class="card_price">Gratuito</p>
+          </div>
+        </div>
+      {%endfor%}
+    </section>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <a class="close-modal">
+          <i class="material-icons">close</i>
+        </a>
+        <a class="max-modal">
+          <i class="material-icons">maximize</i>
+        </a>
+        <div class="modal-content">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/scripts.js"></script>
+{%endblock%}
